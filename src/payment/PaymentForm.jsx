@@ -22,7 +22,7 @@ const StripePaymentForm = () => {
       // Ensure the response contains clientSecret and amount
       const { clientSecret, amount: newAmount } = response.data;
       setDiscountedAmount(newAmount);
-      alert(`Coupon applied! Final amount: ${newAmount}`);
+    //   alert(`Coupon applied! Final amount: ${newAmount}`);
       return clientSecret;
     } catch (err) {
       setError(`Failed to apply coupon: ${err.message}`);
