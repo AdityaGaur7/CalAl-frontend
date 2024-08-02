@@ -14,7 +14,7 @@ const StripePaymentForm = () => {
   // Function to apply coupon and get client secret
   const handleApplyCoupon = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/create-payment-intent', {
+      const response = await axios.post('https://calal-backend.onrender.com/create-payment-intent', {
         amount,
         couponCode
       });

@@ -15,7 +15,7 @@ const PayPalPaymentButton = () => {
 
         window.paypal.Buttons({
           createOrder: async () => {
-            const { data } = await axios.post('http://localhost:5000/create-paypal-order', {
+            const { data } = await axios.post('https://calal-backend.onrender.com/create-paypal-order', {
               amount: finalAmount,
               couponCode
             });
@@ -37,7 +37,7 @@ const PayPalPaymentButton = () => {
 
   const handleApplyCoupon = async () => {
     try {
-      const { data } = await axios.post('http://localhost:5000/create-paypal-order', {
+      const { data } = await axios.post('https://calal-backend.onrender.com/create-paypal-order', {
         amount,
         couponCode
       });
